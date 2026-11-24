@@ -25,9 +25,9 @@
 
 **필수**
 
-- [ ] cart · order · payment · product · seller · user **6개 모두** 4계층으로 (주문은 수업 코드를 이어서)
-- [ ] 각 도메인의 `Repository` 는 domain 에 인터페이스, infrastructure 에 구현 (**DIP**)
-- [ ] 도메인 루트 패키지에 계층 밖으로 남은 클래스 0개
+- [x] cart · order · payment · product · seller · user **6개 모두** 4계층으로 (주문은 수업 코드를 이어서)
+- [x] 각 도메인의 `Repository` 는 domain 에 인터페이스, infrastructure 에 구현 (**DIP**)
+- [x] 도메인 루트 패키지에 계층 밖으로 남은 클래스 0개
 - [ ] `common/response/ApiResponse<T>` — `{ "success": true, "data": … }` / `{ "success": false, "error": { "code", "message" } }`
 - [ ] 모든 컨트롤러 메서드가 `ApiResponse` 를 반환
 - [ ] `common/exception/GlobalExceptionHandler` (`@RestControllerAdvice`) 로 예외 → 실패 응답 변환
