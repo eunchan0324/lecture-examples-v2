@@ -24,16 +24,16 @@
 
 **필수**
 
-- [ ] `monolith-reference/src` 의 `product`, `payment`, `order` 코드를 각 모듈의 `com.growmighty.lectures.firstday.<도메인>` 패키지로 이관
-- [ ] 패키지 경로가 `...tangledmonolith.<도메인>` → `...firstday.<도메인>` 으로 바뀝니다. 공통 응답·예외는 `common` 모듈의 것을 사용
-- [ ] **각 서비스는 자기 DB만** — 다른 도메인 Repository/Service 를 직접 호출하던 곳은 DDD Step 5 의 **API 호출(Port + HttpClient)** 로
+- [x] `monolith-reference/src` 의 `product`, `payment`, `order` 코드를 각 모듈의 `com.growmighty.lectures.firstday.<도메인>` 패키지로 이관
+- [x] 패키지 경로가 `...tangledmonolith.<도메인>` → `...firstday.<도메인>` 으로 바뀝니다. 공통 응답·예외는 `common` 모듈의 것을 사용
+- [x] **각 서비스는 자기 DB만** — 다른 도메인 Repository/Service 를 직접 호출하던 곳은 DDD Step 5 의 **API 호출(Port + HttpClient)** 로
   - order → product (`GET /products/{id}`, `POST /products/{id}/decrease-stock`), order → payment (`POST /payments`)
-- [ ] `monolith-reference/tests/<모듈>/java` 를 각 모듈 `src/test/java` 로 옮겨 통과
+- [x] `monolith-reference/tests/<모듈>/java` 를 각 모듈 `src/test/java` 로 옮겨 통과
 
 **도전**
 
-- [ ] 서비스 3개를 띄우고 `order-service` 로 주문 생성 성공 (`curl -X POST localhost:8080/orders ...`)
-- [ ] `./gradlew :order-service:dependencies` 로 order 가 product/payment 모듈에 **컴파일 의존하지 않음**을 확인
+- [x] 서비스 3개를 띄우고 `order-service` 로 주문 생성 성공 (`curl -X POST localhost:8080/orders ...`)
+- [x] `./gradlew :order-service:dependencies` 로 order 가 product/payment 모듈에 **컴파일 의존하지 않음**을 확인
 
 ## 완료 기준
 
